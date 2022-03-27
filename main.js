@@ -1,10 +1,13 @@
-import https from 'https';
-const url = 'https://www.google.com';
- 
-https.get(url, res => {
-  let html = '';
-  res.on('data', line => html += line);
-  res.on('end', () => {
-    console.log(html);
-  });
+import client from 'cheerio-httpcli';
+
+const url = 'https://scraping-for-beginner.herokuapp.com/image';
+const param = {};
+
+client.fetch(url, param, (err, $, res) => {
+  if (err) {
+    console.log('error');
+    return;
+  }
+  const src = $('img').url();
+  src.forEach(elem => console.log(elem));
 });
