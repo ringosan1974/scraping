@@ -1,2 +1,3 @@
 # scraping
-Webã‚¹ã‚¯ãƒ¬ã‚¤ãƒ”ãƒ³ã‚°ã®ç·´ç¿’
+WebƒXƒNƒŒƒCƒsƒ“ƒO‚Ì—ûK
+ƒTƒCƒg‚Ì’†‚Ì‰æ‘œ‚ÌURL‚ðŽæ“¾‚·‚é
