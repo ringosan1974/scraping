@@ -1,2 +1,2 @@
 # scraping
-I am practicing WebScraping now.
+Webスクレイピング練習中
