@@ -1,9 +1,15 @@
 import client from 'cheerio-httpcli';
 import fs from 'fs';
 
+const url = 'https://scraping-for-beginner.herokuapp.com/image';
+const html_elem = 'img.materialbox.responsive-img.card';
+
+let counter = 0;
+
 client.download
 .on('ready',(stream) => {
-  const write = fs.createWriteStream('.\\image\\image.png');
+  const write = fs.createWriteStream(`.\\image\\image${counter}.png`);
+  counter++;
   write
     .on('finish',() => {
       console.log(stream.url.href + 'をダウンロードしました');
@@ -27,7 +33,7 @@ client.download
 client.download.parallel = 4;
 
 // スクレイピング開始
-client.fetch('https://scraping-for-beginner.herokuapp.com/image',(err, $, res, body) => {
-  $('img.materialbox.responsive-img.card').download();
+client.fetch(url,(err, $, res, body) => {
+  $(html_elem).download();
   console.log('OK!');
 });
