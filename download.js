@@ -1,15 +1,12 @@
 import client from 'cheerio-httpcli';
 import fs from 'fs';
 
-const url = 'url';
-const html_elem = 'element';
-
-let counter = 0;
+const url = 'please write url';
+const html_elem = 'please write element';
 
 client.download
 .on('ready',(stream) => {
-  const write = fs.createWriteStream(`./image/image${counter}.png`);
-  counter++;
+  const write = fs.createWriteStream(`./image/` + Math.floor(Math.random() * 99999)  + stream.url.href.slice(-4));
   write
     .on('finish',() => {
       console.log(stream.url.href + 'をダウンロードしました');
