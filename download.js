@@ -1,6 +1,6 @@
-import client from 'cheerio-httpcli';
-import fs from 'fs';
-import dotenv from 'dotenv'
+const client = require('cheerio-httpcli');
+const fs = require('fs');
+const dotenv = require('dotenv')
 
 //.envからサイトのurlと取得するhtml要素を読み取る
 dotenv.config();

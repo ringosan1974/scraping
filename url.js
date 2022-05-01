@@ -1,4 +1,4 @@
-import client from 'cheerio-httpcli';
+const client = require('cheerio-httpcli');
 
 const url = 'https://scraping-for-beginner.herokuapp.com/image';
 
